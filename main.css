@@ -3,13 +3,20 @@
     margin: 0;
     box-sizing: border-box;
     font-size: 100%;
-    text-decoration: none;
+    text-decoration: black;
+    font-family: Arial, sans-serif;
 }
 
 .top-nav {
-    width: 130rem;
-    height: 10rem;
-    background-color: rgba(210, 144, 21, 0.44);
+    width: 64rem;
+    height: 5rem;
+    background-color: rgba(255, 170, 49, 0.53);
+}
+
+a {
+    position: center;
+    text-align: center;
+    color: black;
 }
 
 ul {
@@ -18,39 +25,40 @@ ul {
     padding-right: 1rem;
     border: #9b9b9b solid 1px;
     border-radius: 5px;
+    box-shadow: #8f8b8b 1px 1px 1px;
 }
 
-ul a {
-    text-align: center;
-    align-items: center;
+ul:hover {
+    cursor: pointer;
+    box-shadow: #8f8b8b -1px -1px 1px;
 }
 
 .ul1 {
-    margin-left: 30rem;
+    margin-left: 15rem;
     margin-top: 1rem;
 }
 
 .ul2 {
-    margin-left: 40rem;
+    margin-left: 23rem;
     margin-top: 1rem;
 }
 
 .ul3 {
-    margin-left: 50rem;
+    margin-left: 31rem;
     margin-top: 1rem;
 }
 
 .ul4 {
-    margin-left: 60rem;
+    margin-left: 39rem;
     margin-top: 1rem;
 }
 
 .ul5 {
-    margin-left: 70rem;
+    margin-left: 47rem;
     margin-top: 1rem;
 }
 
 .ul6 {
-    margin-left: 80rem;
+    margin-left: 55rem;
     margin-top: 1rem;
 }
