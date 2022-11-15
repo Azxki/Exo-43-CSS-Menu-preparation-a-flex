@@ -1,64 +1,176 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 100%;
-    text-decoration: black;
+    margin: 0px;
+    padding: 0px;
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
-.top-nav {
-    width: 64rem;
-    height: 5rem;
-    background-color: rgba(255, 170, 49, 0.53);
+
+@media screen and (max-width: 980px) {
+    nav {
+        width: 100%;
+        margin: 0 auto;
+        background-color: white;
+        position: static;
+        top: 0px;
+    }
+
+    .conteneur-nav {
+        position: absolute;
+        width: 100%;
+    }
+
+    nav input[type=checkbox] {
+        display: none;
+    }
+
+    nav label {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 0px;
+        text-align: center;
+        background-color: gold;
+    }
+
+    nav ul {
+        display: none;
+        list-style-type: none;
+        background-color: #555;
+    }
+
+    nav ul li {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    nav > div > ul > li > a {
+        color: white;
+    }
+
+    nav a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 10px 0px;
+        font-size: 1.5rem;
+    }
+
+    .sous {
+        display: flex;
+        flex-flow: column wrap;
+        z-index: 1;
+        align-items: center;
+    }
+
+    .sous li {
+        flex: 1 1 auto;
+        text-align: left;
+    }
+
+    .sous a {
+        padding: 10px;
+        background-color: RGBa(200, 200, 200, 0.8);
+    }
+
+    .conteneur-nav {
+        position: static;
+    }
+
+    nav label, nav input {
+        display: none;
+    }
+
+    nav input[type=checkbox]:checked + ul, nav ul {
+        display: flex;
+        flex-flow: row wrap;
+        background-color: cornflowerblue;
+    }
+
+    nav ul li {
+        position: relative;
+    }
+
+    nav > div > ul > li > a {
+        color: black;
+    }
+
+    nav a {
+        border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover {
+        color: orange;
+        border-bottom: 2px solid gold;
+    }
+
+    .sous {
+        display: none;
+        box-shadow: 0px 1px 2px #CCC;
+        background-color: white;
+        position: absolute;
+        width: 100%;
+    }
+
+    nav > div > ul li:hover .sous {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .sous a {
+        border-bottom: none;
+        background-color: white;
+    }
+
+    .sous a:hover {
+        border-bottom: none;
+        background-color: RGBa(200, 200, 200, 0.1);
+    }
+
+    .deroulant > a::after {
+        content: " ▼";
+        font-size: 12px;
+    }
 }
 
-a {
-    position: center;
-    text-align: center;
-    color: black;
-}
+@media screen and (min-width: 980px) {
 
-ul {
-    position: fixed;
-    display: inline;
-    padding-right: 1rem;
-    border: #9b9b9b solid 1px;
-    border-radius: 5px;
-    box-shadow: #8f8b8b 1px 1px 1px;
-}
+    * {
+        text-decoration: none;
+    }
 
-ul:hover {
-    cursor: pointer;
-    box-shadow: #8f8b8b -1px -1px 1px;
-}
+    .sous {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-evenly;
+        list-style: none;
+        text-decoration: none;
+        background-color: #eaeaea;
+        margin-top: -2.3rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
 
-.ul1 {
-    margin-left: 15rem;
-    margin-top: 1rem;
-}
+    li a {
+        border: black solid 2px;
+        border-radius: 5px;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        background-color: cornflowerblue;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
 
-.ul2 {
-    margin-left: 23rem;
-    margin-top: 1rem;
-}
+    li a:hover {
+        cursor: pointer;
+    }
 
-.ul3 {
-    margin-left: 31rem;
-    margin-top: 1rem;
-}
+    input {
+        width: 0%;
+        height: 0%;
+    }
 
-.ul4 {
-    margin-left: 39rem;
-    margin-top: 1rem;
-}
-
-.ul5 {
-    margin-left: 47rem;
-    margin-top: 1rem;
-}
-
-.ul6 {
-    margin-left: 55rem;
-    margin-top: 1rem;
+    #home {
+        visibility: hidden;
+        margin-bottom: 200px;
+    }
 }
